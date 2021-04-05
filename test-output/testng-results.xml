@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="148609" started-at="2021-04-05T06:06:57Z" finished-at="2021-04-05T06:09:25Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="148609" started-at="2021-04-05T06:06:57Z" finished-at="2021-04-05T06:09:25Z">
+      <class name="org.test.Lennox">
+        <test-method status="PASS" signature="browserLaunch()[pri:0, instance:org.test.Lennox@68c4039c]" name="browserLaunch" is-config="true" duration-ms="1857" started-at="2021-04-05T11:36:57Z" finished-at="2021-04-05T11:36:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserLaunch -->
+        <test-method status="PASS" signature="test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:org.test.Lennox@68c4039c]" name="test" duration-ms="43864" started-at="2021-04-05T11:36:59Z" data-provider="data" finished-at="2021-04-05T11:37:43Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[User8]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Test8]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[1234567890]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[qwerty@gmail.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[2-May-2021]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+        <test-method status="PASS" signature="aftermethod()[pri:0, instance:org.test.Lennox@68c4039c]" name="aftermethod" is-config="true" duration-ms="645" started-at="2021-04-05T11:37:43Z" finished-at="2021-04-05T11:37:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftermethod -->
+        <test-method status="PASS" signature="browserLaunch()[pri:0, instance:org.test.Lennox@68c4039c]" name="browserLaunch" is-config="true" duration-ms="1230" started-at="2021-04-05T11:37:43Z" finished-at="2021-04-05T11:37:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserLaunch -->
+        <test-method status="PASS" signature="test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:org.test.Lennox@68c4039c]" name="test" duration-ms="66961" started-at="2021-04-05T11:37:45Z" data-provider="data" finished-at="2021-04-05T11:38:51Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[User9]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Test9]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[8745691230]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[abcde@gmail.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[2-July-2021]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+        <test-method status="PASS" signature="aftermethod()[pri:0, instance:org.test.Lennox@68c4039c]" name="aftermethod" is-config="true" duration-ms="641" started-at="2021-04-05T11:38:51Z" finished-at="2021-04-05T11:38:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftermethod -->
+        <test-method status="PASS" signature="browserLaunch()[pri:0, instance:org.test.Lennox@68c4039c]" name="browserLaunch" is-config="true" duration-ms="1218" started-at="2021-04-05T11:38:52Z" finished-at="2021-04-05T11:38:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserLaunch -->
+        <test-method status="PASS" signature="test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:org.test.Lennox@68c4039c]" name="test" duration-ms="31168" started-at="2021-04-05T11:38:53Z" data-provider="data" finished-at="2021-04-05T11:39:24Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[User6]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Test6]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[7812121151]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[abcz@gmail.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[12-May-2021]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+        <test-method status="PASS" signature="aftermethod()[pri:0, instance:org.test.Lennox@68c4039c]" name="aftermethod" is-config="true" duration-ms="658" started-at="2021-04-05T11:39:24Z" finished-at="2021-04-05T11:39:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftermethod -->
+      </class> <!-- org.test.Lennox -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

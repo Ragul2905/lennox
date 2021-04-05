@@ -31,7 +31,7 @@ public class Lennox extends BaseClass{
 	 }
 	
 	@Test(dataProvider="data", dataProviderClass = Datas.class)
-	private void test(String fName, String lName, String  phone, String email, String date) throws Exception {
+	private void test(String fName, String lName, String  phone, String email, String date, String docu, String image) throws Exception {
 		launchurl("https://www.liidaveqa.com/");
 		LoginPage p = new LoginPage();
 		p.getSignIn().click();
@@ -55,11 +55,14 @@ public class Lennox extends BaseClass{
 		
 		d.getAddDocu().click();
 		selectDocu(d.getDocutype(), "OTHER");
-		d.getSelect().sendKeys(System.getProperty("user.dir")+"\\src\\test\\resources\\Lennox.docx");
+		String path = System.getProperty("user.dir");
+		d.getSelect().sendKeys(path+docu);
 		javaScript(d.getAddDocutoLead());
-		d.getAddImage().sendKeys(System.getProperty("user.dir")+"\\src\\test\\resources\\lennox.png");
+		d.getAddImage().sendKeys(path+image);
 		javaScript(d.getSubmitLead());
 		explicitWait(d.getLeadAdded(), fName);
+		screenShot(fName);
+		
 	}
 	
 	@AfterMethod

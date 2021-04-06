@@ -33,13 +33,14 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class BaseClass {
 
 	public static WebDriver driver;
 
 	public static WebDriver launchBrowser() {
-		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\Rahul\\eclipse-workspace\\Selenium\\Driver\\chromedriver.exe");
+		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		return driver;
 	}
@@ -92,7 +93,7 @@ public class BaseClass {
 	}
 
 	public static String datadriven(int Rowno, int Cellno) throws IOException {
-		File loc = new File(System.getProperty("user.dir")+"\\src\\test\\resources\\Dummy.xlsx");
+		File loc = new File(System.getProperty("user.dir") + "\\src\\test\\resources\\Dummy.xlsx");
 		FileInputStream is = new FileInputStream(loc);
 		Workbook w = new XSSFWorkbook(is);
 		Sheet s = w.getSheet("Sheet2");
@@ -122,7 +123,7 @@ public class BaseClass {
 		js.executeScript("arguments[0].click()", e);
 
 	}
-	
+
 	public static void selectDate(String date, WebElement e, WebElement e1) throws InterruptedException {
 		String[] split = date.split("-");
 		String dt = split[0];
@@ -130,44 +131,36 @@ public class BaseClass {
 		for (int i = 0; i < 15; i++) {
 			String month = e.getText();
 			if (month.equals(mon)) {
-				break;	
+				break;
 			}
 			WebElement next = e1;
 			javaScript(next);
-			
+
 		}
 		driver.findElement(By.linkText(dt)).click();
-		
-		
-		
+
 	}
-	
+
 	public static void screenShot(String name) throws IOException {
-		TakesScreenshot tk = (TakesScreenshot)driver;
+		TakesScreenshot tk = (TakesScreenshot) driver;
 		File temp = tk.getScreenshotAs(OutputType.FILE);
-		File perm = new File(System.getProperty("user.dir")+"\\src\\test\\resources\\screenShot\\"+name+".png");
+		File perm = new File(System.getProperty("user.dir") + "\\src\\test\\resources\\screenShot\\" + name + ".png");
 		FileUtils.copyFile(temp, perm);
-		
+
 	}
-	
+
 	public static void selectDocu(WebElement e, String text) {
 		WebElement selectDocu = e;
 		Select s = new Select(selectDocu);
 		s.selectByVisibleText(text);
 
 	}
-	
+
 	public static void explicitWait(WebElement e, String name) throws IOException {
 		WebDriverWait w = new WebDriverWait(driver, 40);
 		w.until(ExpectedConditions.visibilityOf(e));
 		screenShot(name);
 
 	}
-	
-	
-
-	
-	
-	
 
 }

@@ -6,4 +6,15 @@
       <class name="org.test.Lennox"/>
     </classes>
   </test> <!-- Default test -->
+  <test name="Default test(failed)">
+    <classes>
+      <class name="org.test.Lennox">
+        <methods>
+          <include name="browserLaunch"/>
+          <include name="aftermethod"/>
+          <include name="test" invocation-numbers="0 1 2"/>
+        </methods>
+      </class> <!-- org.test.Lennox -->
+    </classes>
+  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
